@@ -1,0 +1,19 @@
+﻿@page
+@model SENG300Scholarships.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+    <div class="login-box">
+        <form class="form">
+            <h2>Login</h2>
+            <div class="form-c">
+                <input type="text" id="username" placeholder="Enter username" asp-for="username" />
+            </div>
+            <div class="form-c">
+                <input type="password" id="password" placeholder="Enter password" asp-for="password" />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+

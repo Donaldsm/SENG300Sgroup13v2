@@ -1,0 +1,73 @@
+﻿@page
+@model SENG300Scholarships.Pages.Scholarships.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Scholarship</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.value)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.value)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.org)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.org)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.duration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.duration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.deadline)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.deadline)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.scope)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.scope)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.major)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.major)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scholarship.GPA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scholarship.GPA)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Scholarship.ScholarshipID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
