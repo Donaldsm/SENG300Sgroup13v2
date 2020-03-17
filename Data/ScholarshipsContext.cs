@@ -17,11 +17,13 @@ namespace SENG300Scholarships.Data
         public DbSet<SENG300Scholarships.Models.User> Users { get; set; }
         public DbSet<SENG300Scholarships.Models.Submission> Submissions { get; set; }
         public DbSet<SENG300Scholarships.Models.Scholarship> Scholarships { get; set; }
+        public DbSet<SENG300Scholarships.Models.Nomination> Nominations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Submission>().ToTable("Submission");
             modelBuilder.Entity<Scholarship>().ToTable("Scholarship");
+            modelBuilder.Entity<Nomination>().ToTable("Nomination");
 
         }
     }

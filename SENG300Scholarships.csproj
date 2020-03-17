@@ -16,4 +16,17 @@
 
 
 
+  <ItemGroup>
+    <None Remove="EmptyHtmlFile.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\Instructor\Index.cshtml.cs" />
+    <Compile Remove="Models\EmptyClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\Instructor\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Nominations\" />
+  </ItemGroup>
 </Project>
