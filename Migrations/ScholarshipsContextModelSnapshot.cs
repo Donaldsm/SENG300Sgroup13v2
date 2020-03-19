@@ -60,32 +60,11 @@ namespace SENG300Scholarships.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<double>("GPA")
-                        .HasColumnType("REAL");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ReferenceEmail")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ReferenceName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("ScholarshipID")
+                    b.Property<int?>("ScholarshipID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("School")
+                    b.Property<string>("Student")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("StudentID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<double>("Year")
-                        .HasColumnType("REAL");
 
                     b.HasKey("SubmissionId");
 
@@ -120,9 +99,7 @@ namespace SENG300Scholarships.Migrations
                 {
                     b.HasOne("SENG300Scholarships.Models.Scholarship", null)
                         .WithMany("Submissions")
-                        .HasForeignKey("ScholarshipID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ScholarshipID");
                 });
 #pragma warning restore 612, 618
         }

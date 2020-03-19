@@ -49,15 +49,8 @@ namespace SENG300Scholarships.Migrations
                 {
                     SubmissionId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    StudentID = table.Column<int>(nullable: false),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    School = table.Column<string>(nullable: true),
-                    GPA = table.Column<double>(nullable: false),
-                    Year = table.Column<double>(nullable: false),
-                    ScholarshipID = table.Column<int>(nullable: false),
-                    ReferenceName = table.Column<string>(nullable: true),
-                    ReferenceEmail = table.Column<string>(nullable: true)
+                    Student = table.Column<string>(nullable: true),
+                    ScholarshipID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -67,7 +60,7 @@ namespace SENG300Scholarships.Migrations
                         column: x => x.ScholarshipID,
                         principalTable: "Scholarship",
                         principalColumn: "ScholarshipID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
