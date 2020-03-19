@@ -9,7 +9,7 @@ using SENG300Scholarships.Data;
 namespace SENG300Scholarships.Migrations
 {
     [DbContext(typeof(ScholarshipsContext))]
-    [Migration("20200315045640_InitialCreate")]
+    [Migration("20200319055438_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,11 +62,32 @@ namespace SENG300Scholarships.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ScholarshipID")
+                    b.Property<string>("FirstName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("GPA")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReferenceEmail")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReferenceName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ScholarshipID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Student")
+                    b.Property<string>("School")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("StudentID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Year")
+                        .HasColumnType("REAL");
 
                     b.HasKey("SubmissionId");
 
@@ -101,7 +122,9 @@ namespace SENG300Scholarships.Migrations
                 {
                     b.HasOne("SENG300Scholarships.Models.Scholarship", null)
                         .WithMany("Submissions")
-                        .HasForeignKey("ScholarshipID");
+                        .HasForeignKey("ScholarshipID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

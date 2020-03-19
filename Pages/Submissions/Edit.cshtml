@@ -15,9 +15,49 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Submission.SubmissionId" />
             <div class="form-group">
-                <label asp-for="Submission.Student" class="control-label"></label>
-                <input asp-for="Submission.Student" class="form-control" />
-                <span asp-validation-for="Submission.Student" class="text-danger"></span>
+                <label asp-for="Submission.StudentID" class="control-label"></label>
+                <input asp-for="Submission.StudentID" class="form-control" />
+                <span asp-validation-for="Submission.StudentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.FirstName" class="control-label"></label>
+                <input asp-for="Submission.FirstName" class="form-control" />
+                <span asp-validation-for="Submission.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.LastName" class="control-label"></label>
+                <input asp-for="Submission.LastName" class="form-control" />
+                <span asp-validation-for="Submission.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.School" class="control-label"></label>
+                <input asp-for="Submission.School" class="form-control" />
+                <span asp-validation-for="Submission.School" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.GPA" class="control-label"></label>
+                <input asp-for="Submission.GPA" class="form-control" />
+                <span asp-validation-for="Submission.GPA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.Year" class="control-label"></label>
+                <input asp-for="Submission.Year" class="form-control" />
+                <span asp-validation-for="Submission.Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.ScholarshipID" class="control-label"></label>
+                <input asp-for="Submission.ScholarshipID" class="form-control" />
+                <span asp-validation-for="Submission.ScholarshipID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.ReferenceName" class="control-label"></label>
+                <input asp-for="Submission.ReferenceName" class="form-control" />
+                <span asp-validation-for="Submission.ReferenceName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Submission.ReferenceEmail" class="control-label"></label>
+                <input asp-for="Submission.ReferenceEmail" class="form-control" />
+                <span asp-validation-for="Submission.ReferenceEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
