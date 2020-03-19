@@ -1,0 +1,24 @@
+﻿@page
+@model SENG300Scholarships.FaqModel
+@{
+    ViewData["Title"] = "Faq";
+}
+
+<h1>Frequently Asked Questions</h1>
+<div>
+    <h3>How does one apply?</h3>
+    <div id="answer">
+        <p>
+            Click the following link and follow the instructions on the page.
+            <a asp-page="Submissions/Create">Apply now!</a>
+        </p>
+    </div>
+    <h3>What are the academic requirements?</h3>
+    <div id="answer">
+        <p>
+            Each of the different scholarships will have their own different requirements. To find out more about some scholarship that you are aiming to apply for please visit the detailed breakdown page found with each of them.
+            these pages can be found by visiting the link here <a asp-page="Scholarships/Index">Scholarships</a>.
+        </p>
+    </div>
+</div>
+

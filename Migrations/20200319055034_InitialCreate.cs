@@ -8,6 +8,21 @@ namespace SENG300Scholarships.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Nomination",
+                columns: table => new
+                {
+                    NominationID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ScholarshipID = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true),
+                    Letter = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Nomination", x => x.NominationID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Scholarship",
                 columns: table => new
                 {
@@ -50,6 +65,7 @@ namespace SENG300Scholarships.Migrations
                     SubmissionId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Student = table.Column<string>(nullable: true),
+                    GPA = table.Column<string>(nullable: true),
                     ScholarshipID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -71,6 +87,9 @@ namespace SENG300Scholarships.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Nomination");
+
             migrationBuilder.DropTable(
                 name: "Submission");
 

@@ -9,7 +9,7 @@ using SENG300Scholarships.Data;
 namespace SENG300Scholarships.Migrations
 {
     [DbContext(typeof(ScholarshipsContext))]
-    [Migration("20200315045640_InitialCreate")]
+    [Migration("20200319055034_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,6 +17,26 @@ namespace SENG300Scholarships.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.1");
+
+            modelBuilder.Entity("SENG300Scholarships.Models.Nomination", b =>
+                {
+                    b.Property<int>("NominationID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Letter")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ScholarshipID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("NominationID");
+
+                    b.ToTable("Nomination");
+                });
 
             modelBuilder.Entity("SENG300Scholarships.Models.Scholarship", b =>
                 {
@@ -61,6 +81,9 @@ namespace SENG300Scholarships.Migrations
                     b.Property<int>("SubmissionId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("GPA")
+                        .HasColumnType("TEXT");
 
                     b.Property<int?>("ScholarshipID")
                         .HasColumnType("INTEGER");
