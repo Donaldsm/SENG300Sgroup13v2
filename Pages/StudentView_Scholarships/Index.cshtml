@@ -1,0 +1,95 @@
+﻿@page
+@model SENG300Scholarships.Pages.StudentView_Scholarships.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Available Scholarships:</h1>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Filter by GPA:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <a asp-page="./Index">Return to full list</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].org)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].deadline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].scope)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].major)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].GPA)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Scholarship)
+        {
+            <!--if ((Text1 is float || int) && (item.GPA <= Text1))
+            {-->
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.value)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.org)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.deadline)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.scope)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.major)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GPA)
+                </td>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@item.ScholarshipID">Details</a> |
+                    <a asp-page="/Index">Apply</a>
+                </td>
+            </tr>
+            <!--}-->
+        }
+    </tbody>
+</table>

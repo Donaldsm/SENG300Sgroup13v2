@@ -1,0 +1,75 @@
+﻿@page
+@model SENG300Scholarships.Pages.StudentView_Scholarships.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Scholarship</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Scholarship.ScholarshipID" />
+            <div class="form-group">
+                <label asp-for="Scholarship.Title" class="control-label"></label>
+                <input asp-for="Scholarship.Title" class="form-control" />
+                <span asp-validation-for="Scholarship.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.value" class="control-label"></label>
+                <input asp-for="Scholarship.value" class="form-control" />
+                <span asp-validation-for="Scholarship.value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.amount" class="control-label"></label>
+                <input asp-for="Scholarship.amount" class="form-control" />
+                <span asp-validation-for="Scholarship.amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.org" class="control-label"></label>
+                <input asp-for="Scholarship.org" class="form-control" />
+                <span asp-validation-for="Scholarship.org" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.duration" class="control-label"></label>
+                <input asp-for="Scholarship.duration" class="form-control" />
+                <span asp-validation-for="Scholarship.duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.deadline" class="control-label"></label>
+                <input asp-for="Scholarship.deadline" class="form-control" />
+                <span asp-validation-for="Scholarship.deadline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.scope" class="control-label"></label>
+                <input asp-for="Scholarship.scope" class="form-control" />
+                <span asp-validation-for="Scholarship.scope" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.major" class="control-label"></label>
+                <input asp-for="Scholarship.major" class="form-control" />
+                <span asp-validation-for="Scholarship.major" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarship.GPA" class="control-label"></label>
+                <input asp-for="Scholarship.GPA" class="form-control" />
+                <span asp-validation-for="Scholarship.GPA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
