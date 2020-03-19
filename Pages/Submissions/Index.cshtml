@@ -16,7 +16,33 @@
             <th>
                 @Html.DisplayNameFor(model => model.Submission[0].Student)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].StudentID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].School)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].GPA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].ScholarshipID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].ReferenceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submission[0].ReferenceEmail)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -25,6 +51,33 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Student)
             </td>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].StudentID)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].School)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].Year)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].GPA)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].ScholarshipID)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].ReferenceName)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Submission[0].ReferenceEmail)
+            </th>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.SubmissionId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.SubmissionId">Details</a> |
