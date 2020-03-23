@@ -28,6 +28,9 @@ namespace SENG300Scholarships.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("UploadPath")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("amount")
                         .HasColumnType("INTEGER");
 
