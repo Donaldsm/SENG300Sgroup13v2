@@ -9,7 +9,7 @@ using SENG300Scholarships.Data;
 namespace SENG300Scholarships.Migrations
 {
     [DbContext(typeof(ScholarshipsContext))]
-    [Migration("20200319235319_InitialCreate")]
+    [Migration("20200315045640_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,9 +28,6 @@ namespace SENG300Scholarships.Migrations
                         .HasColumnType("REAL");
 
                     b.Property<string>("Title")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("UploadPath")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("amount")
