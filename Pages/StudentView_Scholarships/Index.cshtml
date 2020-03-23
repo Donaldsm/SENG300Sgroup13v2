@@ -22,10 +22,14 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].Title)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.TitleSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].Title)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].value)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ValueSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].value)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Scholarship[0].amount)
@@ -37,7 +41,9 @@
                 @Html.DisplayNameFor(model => model.Scholarship[0].duration)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].deadline)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DeadlineSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].deadline)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Scholarship[0].scope)
