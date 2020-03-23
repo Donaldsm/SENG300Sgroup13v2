@@ -9,7 +9,7 @@ using SENG300Scholarships.Data;
 namespace SENG300Scholarships.Migrations
 {
     [DbContext(typeof(ScholarshipsContext))]
-    [Migration("20200323033530_InitialCreate")]
+    [Migration("20200323041423_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
