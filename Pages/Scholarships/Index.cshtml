@@ -40,6 +40,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Scholarship[0].GPA)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scholarship[0].UploadPath)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -72,6 +75,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.GPA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadPath)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ScholarshipID">Edit</a> |

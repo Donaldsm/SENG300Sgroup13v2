@@ -21,7 +21,8 @@ namespace SENG300Scholarships.Migrations
                     deadline = table.Column<DateTime>(nullable: false),
                     scope = table.Column<string>(nullable: true),
                     major = table.Column<string>(nullable: true),
-                    GPA = table.Column<float>(nullable: false)
+                    GPA = table.Column<float>(nullable: false),
+                    UploadPath = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
