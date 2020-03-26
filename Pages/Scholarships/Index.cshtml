@@ -8,6 +8,8 @@
 <h1>Index</h1>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="~/js/site.js"></script>
     <style>
         body {
             font-family: Arial;
@@ -45,6 +47,12 @@
             border: 1px solid #ccc;
             border-top: none;
         }
+        .bar{
+            fill: gold;
+        }
+        h6{
+            stroke:cadetblue
+        }
     </style>
     <title> Home </title>
     <header>
@@ -63,8 +71,17 @@
 
 <div id="Home" class="tabcontent">
     <h4> Statistics </h4>
-    <h5> Stats by department, across department, university wide and nation wide </h5>
-    <h5> Stats for prizes awarded, how many students applied last year, how many accepted, how many declined</h5>
+    <h5> Stats by department, across department, university wide and nation wide for previous year </h5>
+
+    <div class="chart1"></div>
+
+    <div class="chart2"></div>
+
+    <div class="chart3"></div>
+
+
+    <h5> Stats for prizes awarded, how many students applied last year, how many accepted, how many declined for previous year</h5>
+    @*d3 going here*@
     <h4> Updates </h4>
     <h5> <a asp-page="/Submissions/Index">Learn More</a> </h5>
 </div>
@@ -209,3 +226,8 @@
         Office hours: Monday - Friday: 9:00 - 16:00
     </h4>
 </footer>
+<script>
+    uni();
+    department();
+    nation();
+</script>
