@@ -1,7 +1,7 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
 
-// Write your Javascript code.
+
+// simple d3 visualizations for the previous years Scholarship information.
 function uni() {
     var margins = { top: 20, right: 20, bottom: 30, left: 40 };
     var width = 800 - margins.left - margins.right;
@@ -35,7 +35,7 @@ function uni() {
             .tickFormat("")
     );
 
-    d3.csv("js/University.csv").then(function (data) {
+    let promise = d3.csv("js/University.csv").then(function (data) {
 
         data.forEach(function (d) {
             d.count = +d.count;
@@ -87,7 +87,19 @@ function uni() {
             .attr("text-anchor", "middle")
             .style("font-family", "Consolas")
             .text("University");
+
+        let domBars = document.getElementsByClassName("bar");
+        for (let i = 0; i < domBars.length; i++) {
+            let bar = domBars[i];
+            bar.addEventListener("mouseenter", function () {
+                d3.select(bar).transition().attr("fill", "red");
+            });
+            bar.addEventListener("mouseleave", function () {
+                d3.select(bar).transition().attr("fill", "green");
+            });
+        }
     });
+    console.log(promise);
 }
 
 function department() {
