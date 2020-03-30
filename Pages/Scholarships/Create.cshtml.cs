@@ -48,13 +48,19 @@ namespace SENG300Scholarships.Pages.Scholarships
                 return Page();
             }
 
-            
+            if (Upload == null){
+            Scholarship.UploadPath = "no file";
+            }
+            else{
             var file = Path.Combine(_env.WebRootPath, "uploads", Upload.FileName);
-            Scholarship.UploadPath = Path.Combine(_env.WebRootPath, "uploads", Upload.FileName);
-            using (var fileStream = new FileStream(file, FileMode.Create))
-            {
-                await Upload.CopyToAsync(fileStream);
+            Scholarship.UploadPath = (Upload.FileName);
 
+
+                using (var fileStream = new FileStream(file, FileMode.Create))
+                {
+                    await Upload.CopyToAsync(fileStream);
+
+                }
             }
 
             _context.Scholarships.Add(Scholarship);
@@ -67,7 +73,10 @@ namespace SENG300Scholarships.Pages.Scholarships
         }
         private readonly IWebHostEnvironment _env;
 
-    
+ 
+
+
+
     }
 }
 

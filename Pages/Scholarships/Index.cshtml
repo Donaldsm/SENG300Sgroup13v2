@@ -41,7 +41,12 @@
                 @Html.DisplayNameFor(model => model.Scholarship[0].GPA)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].UploadPath)
+    
+
+     
+                   @Html.DisplayNameFor(model => model.Scholarship[0].UploadPath)
+           
+               
             </th>
             <th></th>
         </tr>
@@ -77,7 +82,12 @@
                 @Html.DisplayFor(modelItem => item.GPA)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UploadPath)
+                <button type="submit" asp-page-handler="DownloadFile"   asp-route-filename="@item.UploadPath"style="width:75px"
+                        class="cancel">
+                    Download
+                </button>
+                
+                   
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ScholarshipID">Edit</a> |
