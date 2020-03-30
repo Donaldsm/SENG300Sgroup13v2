@@ -33,7 +33,23 @@ namespace SENG300Scholarships
 
                 if(users != null)
                 {
-                    return RedirectToPage("/Scholarships/Index");
+                    if (users.Type.ToUpper() == "STUDENT")
+                    {
+                        return RedirectToPage("/StudentView_Scholarships/Index");
+                    } 
+                    else if (users.Type.ToUpper() == "INSTRUCTOR")
+                    {
+                        return RedirectToPage("/Nominations/Index");
+                    }
+                    else if (users.Type.ToUpper() == "ADMINISTRATOR" || users.Type.ToUpper() == "ADMIN")
+                    {
+                        return RedirectToPage("/Users/Index");
+                    }
+                    else if (users.Type.ToUpper() == "COORDINATOR")
+                    {
+                        return RedirectToPage("/Scholarships/Index");
+                    }
+                    return RedirectToPage("/Index"); // the default return to home if there was no type entered with account registration.
                 }
             }
             return Page();
