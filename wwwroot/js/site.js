@@ -4,8 +4,8 @@
 // simple d3 visualizations for the previous years Scholarship information.
 function uni() {
     var margins = { top: 20, right: 20, bottom: 30, left: 40 };
-    var width = 800 - margins.left - margins.right;
-    var height = 400 - margins.top - margins.bottom;
+    var width = 500 - margins.left - margins.right;
+    var height = 250 - margins.top - margins.bottom;
 
     var x = d3.scaleBand()
         .range([0, width])
@@ -104,8 +104,8 @@ function uni() {
 
 function department() {
     var margins = { top: 20, right: 20, bottom: 30, left: 40 };
-    var width = 800 - margins.left - margins.right;
-    var height = 400 - margins.top - margins.bottom;
+    var width = 500 - margins.left - margins.right;
+    var height = 250 - margins.top - margins.bottom;
 
     var x = d3.scaleBand()
         .range([0, width])
@@ -191,8 +191,8 @@ function department() {
 }
 function nation() {
     var margins = { top: 20, right: 20, bottom: 30, left: 40 };
-    var width = 800 - margins.left - margins.right;
-    var height = 400 - margins.top - margins.bottom;
+    var width = 500 - margins.left - margins.right;
+    var height = 250 - margins.top - margins.bottom;
 
     var x = d3.scaleBand()
         .range([0, width])
