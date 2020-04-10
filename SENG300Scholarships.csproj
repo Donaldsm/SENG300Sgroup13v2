@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\subup\" />
     <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
 

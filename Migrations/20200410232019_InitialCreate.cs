@@ -74,7 +74,9 @@ namespace SENG300Scholarships.Migrations
                     Year = table.Column<double>(nullable: false),
                     ScholarshipID = table.Column<int>(nullable: false),
                     ReferenceName = table.Column<string>(nullable: true),
-                    ReferenceEmail = table.Column<string>(nullable: true)
+                    ReferenceEmail = table.Column<string>(nullable: true),
+                    Status = table.Column<string>(nullable: true),
+                    File = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

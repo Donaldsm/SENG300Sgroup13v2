@@ -17,6 +17,10 @@ namespace SENG300Scholarships.Models
         public double Year { get; set; }
         public int ScholarshipID { get; set; }
         public string ReferenceName { get; set; }
-        public string ReferenceEmail { get; set; }
+        public string ReferenceEmail { get; set;} 
+        public string Status {get; set;}
+
+        public string File { get; set; }
+        
     }
 }
