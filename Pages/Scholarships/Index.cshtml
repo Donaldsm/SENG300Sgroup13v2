@@ -158,7 +158,10 @@
                         @Html.DisplayFor(modelItem => item.GPA)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.UploadPath)
+                        <form asp-page-handler="download" asp-route-filename ="@item.UploadPath" method="post">
+                            <button class="btn btn-default">download</button>
+                        </form>
+                           
                     </td>
                     <td>
                         <a asp-page="./Edit" asp-route-id="@item.ScholarshipID">Edit</a> |

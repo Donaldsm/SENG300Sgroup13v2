@@ -1,15 +1,12 @@
 ﻿@page
-@model SENG300Scholarships.Pages.Submissions.IndexModel
+@model SENG300Scholarships.Pages.Submissions.CoordModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "CoordIndex";
 }
 
 <h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -93,9 +90,7 @@
                 </form>
             </th>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.SubmissionId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.SubmissionId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.SubmissionId">Delete</a>
+                <a asp-page="./Review" asp-route-id="@item.SubmissionId">Review</a>
             </td>
         </tr>
 }

@@ -12,14 +12,14 @@ using SENG300Scholarships.Models;
 
 namespace SENG300Scholarships.Pages.Submissions
 {
-    public class IndexModel : PageModel
+    public class CoordModel : PageModel
     {
         private readonly SENG300Scholarships.Data.ScholarshipsContext _context;
 
-        public IndexModel(SENG300Scholarships.Data.ScholarshipsContext context, IWebHostEnvironment env)
+        public CoordModel(SENG300Scholarships.Data.ScholarshipsContext context, IWebHostEnvironment env)
         {
             _context = context;
-            _env = env;
+            _env = env; 
         }
 
         public IList<Submission> Submission { get;set; }
@@ -36,10 +36,12 @@ namespace SENG300Scholarships.Pages.Submissions
 
             string filePath = Path.Combine(_env.WebRootPath, "subup", filename);
 
+
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
 
             return File(fileBytes, "application/force-download", filename);
 
         }
+
     }
 }
