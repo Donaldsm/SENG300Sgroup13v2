@@ -4,7 +4,8 @@
 @{
     ViewData["Title"] = "Index";
 }
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+<link rel="stylesheet" href="site.css">
 
 <!DOCTYPE html>
 
@@ -16,45 +17,6 @@
 <body>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-
-            body {
-                font-family: Arial;
-            }
-
-            .tab {
-                overflow: hidden;
-                border: 1px solid #ccc;
-                background-color: #f1f1f1;
-            }
-
-                .tab button {
-                    background-color: inherit;
-                    float: left;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                    padding: 14px 16px;
-                    transition: 0.3s;
-                }
-
-                    /* some weird thing */
-                    .tab button:hover {
-                        background-color: #ddd;
-                    }
-
-                    .tab button.active {
-                        background-color: #ccc;
-                    }
-
-
-            .tabcontent {
-                display: none;
-                padding: 6px 12px;
-                border: 1px solid #ccc;
-                border-top: none;
-            }
-        </style>
         <title> Home </title>
         <header>
             <h1> University of Saskatchewan </h1>
@@ -75,11 +37,11 @@
     </div>
 
     <div id="Scholarships" class="tabcontent">
-        <h3>Scholarships Search</h3>
-        <h4> Search for awards for nominations</h4>
+        <h4> Search for awards </h4>
         <h5> Search through database of awards and scholarships </h5>
-        <h5> <button style="button"> Apply filter </button> </h5>
-        <h4> Filter here! List of all scholarships! No scholarships at the moment! </h4>
+        <form action="./StudentView_Scholarships">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </form>
     </div>
 
 

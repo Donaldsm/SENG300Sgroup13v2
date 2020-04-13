@@ -10,12 +10,14 @@
 
 <h1>Available Scholarships:</h1>
 
+<link rel="stylesheet" href="site.css">
+
 
 <form asp-page="./Index" method="get">
     <div class="form-actions no-color">
         <p>
             Filter by GPA:
-            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="number" name="SearchString" value="@Model.CurrentFilter" min="0.0" max="4.3" step="0.1"/>
             <input type="submit" value="Search" class="btn btn-primary" />
             <a asp-page="./Index">Return to full list</a>
         </p>
@@ -36,13 +38,19 @@
                 </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].amount)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.AmountSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].amount)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].org)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.OrgSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].org)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].duration)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DurationSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].duration)
+                </a>
             </th>
             <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.DeadlineSort">
@@ -50,13 +58,19 @@
                 </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].scope)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ScopeSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].scope)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].major)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.MajorSort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].major)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scholarship[0].GPA)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.GPASort">
+                    @Html.DisplayNameFor(model => model.Scholarship[0].GPA)
+                </a>
             </th>
             <th></th>
         </tr>
@@ -64,8 +78,6 @@
     <tbody>
         @foreach (var item in Model.Scholarship)
         {
-            <!--if ((Text1 is float || int) && (item.GPA <= Text1))
-            {-->
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Title)
@@ -99,7 +111,6 @@
                     <a asp-page="/Index">Apply</a>
                 </td>
             </tr>
-            <!--}-->
         }
     </tbody>
 </table>

@@ -5,7 +5,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="site.css">
+
+<h1>Submissions</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -49,6 +51,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Submission[0].File)
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -57,41 +60,41 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Student)
             </td>
-            <th>
+            <td>
                 @Html.DisplayFor(modelItem => item.StudentID)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.FirstName)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.LastName)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.School)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Year)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.GPA)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ScholarshipID)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ReferenceName)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ReferenceEmail)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Status)
-            </th>
-            <th>
+            </td>
+            <td>
                 <form asp-page-handler="download" asp-route-filename="@item.File" method="post">
                     <button class="btn btn-default">download</button>
                 </form>
-            </th>
+            </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.SubmissionId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.SubmissionId">Details</a> |
