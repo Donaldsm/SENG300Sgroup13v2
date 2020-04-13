@@ -154,3 +154,38 @@ table {
     border: 1px solid #ccc;
     border-top: none;
 }
+
+#login-header {
+    margin-top: 20px;
+}
+
+#login-username {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#login-password {
+    margin-bottom: 20px;
+}
+
+
+.shadow {
+    background: #000;
+    border-radius: 12px 12px 4px 4px;
+    box-shadow: 0 0 20px 10px #000;
+    height: 12px;
+    margin: 30px auto;
+    opacity: 0.2;
+    width: 270px;
+}
+
+.form-login {
+    background-image: url(/images/loginborder.png);
+    background-size: 295px 255px;
+    border: 1px solid #42464b;
+    border-radius: 6px;
+    height: 257px;
+    margin: 20px auto 0;
+    width: 298px;
+    text-align: center;
+}

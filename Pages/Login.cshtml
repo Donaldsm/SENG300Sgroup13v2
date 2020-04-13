@@ -3,9 +3,9 @@
 @{
     ViewData["Title"] = "Login";
 }
-    <div class="login-background" style="background-image: url(/images/field.jpg)">
+    <div class="login-background">
         <div class="login-box">
-            <form class="form">
+            <form class="form-login">
                 <h2 id="login-header">Login</h2>
                 <div class="form-c" id="login-username">
                     <input type="text" id="username" placeholder="Enter username" asp-for="username" />
@@ -13,9 +13,10 @@
                 <div class="form-c" id="login-password">
                     <input type="password" id="password" placeholder="Enter password" asp-for="password" />
                 </div>
-                <button type="submit" id="login-button">Submit</button>
+                <button type="submit" class="btn-primary">Submit</button>
             </form>
         </div>
+        <div class="shadow"></div>
     </div>
     
 
