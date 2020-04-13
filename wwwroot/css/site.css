@@ -9,13 +9,23 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #0c6b40 /*#0366d6*/;
+}
+
+a:hover {
+    color: #ffda06
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: #ffda06;
+  background-color: #0c6b40;
+  border-color: #0c6b40;
+}
+
+.btn-primary:hover {
+  color: #ffda06;
+  background-color: #0e8f55;
+  border-color: #0e8f55;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -36,40 +46,104 @@ html {
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: Arial
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 .grid {
     stroke: lightgray;
+}
+
+
+/* Style for tables */
+table {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%
+}
+
+table td, table th {
+    border: 1px solid #e5e5e5;
+    padding: 8px;
+}
+
+table tr:nth-child(even) { background-color: #f2f2f2; }
+
+table tr:hover { background-color: #dddddd;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0c6b40;
+    color: white;
+}
+
+table th a {
+    color: #ffda06
+}
+
+/* Style for tabs*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #0c6b40;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: #ffda06
+}
+
+.tab button:hover {
+    background-color: #0e8f55;
+}
+
+.tab button.active {
+    background-color: #0e8f55;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
