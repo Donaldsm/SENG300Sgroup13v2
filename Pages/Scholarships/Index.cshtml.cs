@@ -18,27 +18,27 @@ namespace SENG300Scholarships.Pages.Scholarships
 
         public IndexModel(SENG300Scholarships.Data.ScholarshipsContext context, IWebHostEnvironment env)
         {
-            _env = env;
+            _env = env; // reference to web directory 
             _context = context;
         }
 
-        public IList<Scholarship> Scholarship { get;set; }
+        public IList<Scholarship> Scholarship { get;set; } // scholarship object
 
         public async Task OnGetAsync()
         {
-            Scholarship = await _context.Scholarships.ToListAsync();
+            Scholarship = await _context.Scholarships.ToListAsync(); // await scholarship context list
             
         }
 
         public async Task<IActionResult> OnPostDownload(string filename)
         {
 
-            string filePath = Path.Combine(_env.WebRootPath, "uploads", filename);
+            string filePath = Path.Combine(_env.WebRootPath, "uploads", filename); // file path from uploads for downloads
 
 
-            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath); // read the file 
 
-            return File(fileBytes, "application/force-download", filename);
+            return File(fileBytes, "application/force-download", filename); //return the file 
 
         }
 
