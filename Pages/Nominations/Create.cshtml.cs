@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using SENG300Scholarships.Data;
 using SENG300Scholarships.Models;
 
+//this cshtml file is to set up and create new nominations
+
 namespace SENG300Scholarships.Pages.Nominations
 {
     public class CreateModel : PageModel
@@ -27,8 +29,6 @@ namespace SENG300Scholarships.Pages.Nominations
         [BindProperty]
         public Nomination Nomination { get; set; }
 
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

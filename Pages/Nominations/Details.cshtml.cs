@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using SENG300Scholarships.Data;
 using SENG300Scholarships.Models;
 
+//this cshtml file is to returns the current status of a nomination
+
 namespace SENG300Scholarships.Pages.Nominations
 {
     public class DetailsModel : PageModel
