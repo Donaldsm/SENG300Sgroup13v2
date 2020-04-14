@@ -34,11 +34,11 @@ namespace SENG300Scholarships.Pages.Submissions
         public async Task<IActionResult> OnPostDownload(string filename)
         {
 
-            string filePath = Path.Combine(_env.WebRootPath, "subup", filename);
+            string filePath = Path.Combine(_env.WebRootPath, "subup", filename); //file path to submissions uploads
 
-            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath); //read file
 
-            return File(fileBytes, "application/force-download", filename);
+            return File(fileBytes, "application/force-download", filename); //return file
 
         }
     }
