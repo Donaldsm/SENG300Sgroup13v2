@@ -1,53 +1,59 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* References: Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification for details on configuring
+    this project to bundle and minify static web assets. w3school.com/css was also used as a resource to help with the styling of the project.
+*/
+
+/* This the the style sheet for the entire project.*/
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
+/* Style for clickable links */
 a {
-  color: #0c6b40 /*#0366d6*/;
+    color: #0c6b40;
 }
 
 a:hover {
     color: #ffda06
 }
 
+/* Style for buttons */
 .btn-primary {
-  color: #ffda06;
-  background-color: #0c6b40;
-  border-color: #0c6b40;
+    color: #ffda06;
+    background-color: #0c6b40;
+    border-color: #0c6b40;
 }
 
 .btn-primary:hover {
-  color: #ffda06;
-  background-color: #0e8f55;
-  border-color: #0e8f55;
+    color: #ffda06;
+    background-color: #0e8f55;
+    border-color: #0e8f55;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
     border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
     border-bottom: 1px solid #e5e5e5;
 }
@@ -73,6 +79,7 @@ body {
     margin-bottom: 60px;
     font-family: Arial
 }
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -98,9 +105,13 @@ table td, table th {
     padding: 8px;
 }
 
-table tr:nth-child(even) { background-color: #f2f2f2; }
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-table tr:hover { background-color: #dddddd;}
+table tr:hover {
+    background-color: #dddddd;
+}
 
 table th {
     padding-top: 12px;
@@ -146,4 +157,41 @@ table th a {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+
+/* log in style */
+#login-header {
+    margin-top: 20px;
+}
+
+#login-username {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#login-password {
+    margin-bottom: 20px;
+}
+
+
+.shadow {
+    background: #000;
+    border-radius: 12px 12px 4px 4px;
+    box-shadow: 0 0 20px 10px #000;
+    height: 12px;
+    margin: 30px auto;
+    opacity: 0.2;
+    width: 270px;
+}
+
+.form-login {
+    background-image: url(/images/loginborder.png);
+    background-size: 295px 255px;
+    border: 1px solid #42464b;
+    border-radius: 6px;
+    height: 257px;
+    margin: 20px auto 0;
+    width: 298px;
+    text-align: center;
 }

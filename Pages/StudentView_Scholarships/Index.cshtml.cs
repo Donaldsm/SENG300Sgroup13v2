@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*Reference: Microsoft Docs was used to help develop the functionality for sorting and filtering
+  https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/sort-filter-page?view=aspnetcore-3.1 */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,6 +22,7 @@ namespace SENG300Scholarships.Pages.StudentView_Scholarships
             _context = context;
         }
 
+        /* Getters and setters for sorting and filter*/
         public string CurrentFilter { get; set; }
         public string TitleSort { get; set; }
         public string ValueSort { get; set; }
@@ -33,6 +37,7 @@ namespace SENG300Scholarships.Pages.StudentView_Scholarships
 
         public async Task OnGetAsync(string searchString, string sortOrder)
         {
+            /* Values indicating sorting and filter settings*/
             CurrentFilter = searchString;
             TitleSort = String.IsNullOrEmpty(sortOrder) ? "title" : "";
             ValueSort = sortOrder == "Value" ? "value" : "Value";
@@ -48,6 +53,7 @@ namespace SENG300Scholarships.Pages.StudentView_Scholarships
             IQueryable<Scholarship> scholarships = from s in _context.Scholarships
                                                    select s;
 
+            /* If a header if clicked we use the uppercase case, otherwise we use the lowercase case*/
             switch (sortOrder)
             {
                 case "title":
@@ -106,6 +112,7 @@ namespace SENG300Scholarships.Pages.StudentView_Scholarships
                     break;
             }
 
+            /* If the filter has a value when the buttom in pressed we only show the list of scholarships with GPAS <= that value */
             if (!String.IsNullOrEmpty(searchString))
             {
                     scholarships = scholarships.Where(s => s.GPA <= float.Parse(searchString));

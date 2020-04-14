@@ -8,11 +8,16 @@
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="~/js/site.js"></script>
 
+<!-- Student view scholarship page -->
 <h1>Available Scholarships:</h1>
 
 <link rel="stylesheet" href="site.css">
 
-
+<!-- Create a GPA filter form, with button -->
+<!-- - "number" = type of text box that will only take numbers
+     - "submit" = a button that can activate the text box
+     - "SearchString" = the value entered in the text box
+     - "Model.CurrentFilter" = allows us to get and set the GPA filter in Index.cshtml.cs -->
 <form asp-page="./Index" method="get">
     <div class="form-actions no-color">
         <p>
@@ -24,6 +29,7 @@
     </div>
 </form>
 
+<!-- Create a table, where the headers are the scholarship attributes and the data is the actual list of scholarships -->
 <table class="table">
     <thead>
         <tr>
