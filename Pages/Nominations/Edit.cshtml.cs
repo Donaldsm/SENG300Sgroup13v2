@@ -9,6 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using SENG300Scholarships.Data;
 using SENG300Scholarships.Models;
 
+//this cshtml file is to set up and edit existing nominations
+
+
 namespace SENG300Scholarships.Pages.Nominations
 {
     public class EditModel : PageModel
@@ -39,8 +42,7 @@ namespace SENG300Scholarships.Pages.Nominations
             return Page();
         }
 
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+      
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

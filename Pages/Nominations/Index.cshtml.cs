@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using SENG300Scholarships.Data;
 using SENG300Scholarships.Models;
 
+// this page controls all operations under nominations page
+
 namespace SENG300Scholarships.Pages.Nominations
 {
     public class IndexModel : PageModel
