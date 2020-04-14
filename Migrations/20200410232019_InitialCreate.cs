@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SENG300Scholarships.Migrations
 {
+    // This code was made to build the database system on SQlite, these migrations have already been run and they are a one time use.
+    // This Migration was used to do the initial create of the database building out each table in the dd.db file found in the project.
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -94,7 +96,7 @@ namespace SENG300Scholarships.Migrations
                 table: "Submission",
                 column: "ScholarshipID");
         }
-
+        // this code is used to drop the tables from the database though it is never called.
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

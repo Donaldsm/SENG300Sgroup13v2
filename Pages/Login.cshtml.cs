@@ -24,7 +24,9 @@ namespace SENG300Scholarships
         public string password { get; set; }
 
         
-
+        // the purpose of the code below is to do a database query to make sure the user that is entered on the login
+        // submission is in the database. Should a user exist matching the username and password, the system
+        // should redirect to the correct home page for that user.
         public async Task<IActionResult> OnGetAsync()
         {
             if(!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
@@ -47,12 +49,12 @@ namespace SENG300Scholarships
                     }
                     else if (users.Type.ToUpper() == "COORDINATOR")
                     {
-                        return RedirectToPage("/Scholarships/Index");
+                        return RedirectToPage("/Coordinator/Index");
                     }
                     return RedirectToPage("/Index"); // the default return to home if there was no type entered with account registration.
                 }
             }
-            return Page();
+            return Page(); // if there was no user found this should keep the person attempting to log in on the login page.
 
         }
     }
