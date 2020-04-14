@@ -3,17 +3,18 @@
 
 // simple d3 visualizations for the previous years Scholarship information.
 function uni() {
+    // set the window size for each of the visualizations
     var margins = { top: 20, right: 20, bottom: 30, left: 40 };
     var width = 500 - margins.left - margins.right;
     var height = 250 - margins.top - margins.bottom;
-
+    // create the xaxis line
     var x = d3.scaleBand()
         .range([0, width])
         .padding(0.1);
-
+    // create the yaxis line
     var y = d3.scaleLinear()
         .range([height, 0]);
-
+    // append the chart to one of the div elements on the page using selections
     var svg = d3.select(".chart1").append("svg")
         .attr("width", width + margins.left + margins.right)
         .attr("height", height + margins.top + margins.bottom + 75)
@@ -34,22 +35,26 @@ function uni() {
             .tickSize(-width)
             .tickFormat("")
     );
-
+    // load the data from the csv specified
     let promise = d3.csv("js/University.csv").then(function (data) {
-
+        // cast the counts in the data from a string to a number.
         data.forEach(function (d) {
             d.count = +d.count;
         });
         console.log(data);
+        // this is the colour scale for the charts
         var colorScale = ["#000004", "#1b0c41", "#4a0c6b", "#781c6d", "#a52c60", "#cf4446", "#ed6925", "#fb9b06", "#f7d13d", "#fcffa4"];
 
+        // map the ticks onto the xaxis and their values
         x.domain(data.map(function (d) {
             return d.status;
         }));
+        // map the y values to the axis
         y.domain([0, d3.max(data, function (d) {
             return d.count;
         }) + 20]);
 
+        // draw the bars
         svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
@@ -68,6 +73,7 @@ function uni() {
                 return colorScale[i + 1];
             });
 
+        // append the xaxis labels
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x))
@@ -78,9 +84,10 @@ function uni() {
             .attr("transform", "rotate(45)")
             .style("text-anchor", "start");
 
+        //append the yaxis labels
         svg.append("g")
             .call(d3.axisLeft(y));
-
+        // append the chart label
         svg.append("text")
             .attr("x", width / 2)
             .attr("y", 0 - margins.top / 2)
@@ -88,6 +95,7 @@ function uni() {
             .style("font-family", "Consolas")
             .text("University");
 
+        // simple event listener for the charts to have minimal interaction
         let domBars = document.getElementsByClassName("bar");
         for (let i = 0; i < domBars.length; i++) {
             let bar = domBars[i];
@@ -102,6 +110,7 @@ function uni() {
     console.log(promise);
 }
 
+// the comments in the chart above also apply to this chart
 function department() {
     var margins = { top: 20, right: 20, bottom: 30, left: 40 };
     var width = 500 - margins.left - margins.right;
@@ -189,6 +198,8 @@ function department() {
             .text("Department");
     });
 }
+
+// the comments in the first chart also apply to this one too.
 function nation() {
     var margins = { top: 20, right: 20, bottom: 30, left: 40 };
     var width = 500 - margins.left - margins.right;

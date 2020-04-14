@@ -2,18 +2,21 @@
 @model SENG300Scholarships.LoginModel
 @{
     ViewData["Title"] = "Login";
-}
-
-    <div class="login-box">
-        <form class="form">
-            <h2>Login</h2>
-            <div class="form-c">
-                <input type="text" id="username" placeholder="Enter username" asp-for="username" />
-            </div>
-            <div class="form-c">
-                <input type="password" id="password" placeholder="Enter password" asp-for="password" />
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+} @*this code is used to make the login box on the login page*@
+    <div class="login-background">
+        <div class="login-box">
+            <form class="form-login">
+                <h2 id="login-header">Login</h2>
+                <div class="form-c" id="login-username">
+                    <input type="text" id="username" placeholder="Enter username" asp-for="username" />
+                </div>
+                <div class="form-c" id="login-password">
+                    <input type="password" id="password" placeholder="Enter password" asp-for="password" />
+                </div>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="shadow"></div>
     </div>
+    
 

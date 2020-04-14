@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SENG300Scholarships.Data;
 
+// File is used by the initial create migration to build out the tables.
 namespace SENG300Scholarships.Migrations
 {
     [DbContext(typeof(ScholarshipsContext))]

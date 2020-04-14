@@ -20,10 +20,10 @@ namespace SENG300Scholarships.Data
         public DbSet<SENG300Scholarships.Models.Nomination> Nominations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("User");
-            modelBuilder.Entity<Submission>().ToTable("Submission");
-            modelBuilder.Entity<Scholarship>().ToTable("Scholarship");
-            modelBuilder.Entity<Nomination>().ToTable("Nomination");
+            modelBuilder.Entity<User>().ToTable("User");                // this is using the model information found in Users.cs in the models folder to build a table for the users based on the variabels found in the file
+            modelBuilder.Entity<Submission>().ToTable("Submission");    // this is using the model information found in Submission.cs in the models folder to build a table for the users based on the variabels found in the file
+            modelBuilder.Entity<Scholarship>().ToTable("Scholarship");  // this is using the model information found in Scholarship.cs in the models folder to build a table for the users based on the variabels found in the file
+            modelBuilder.Entity<Nomination>().ToTable("Nomination");    // this is using the model information found in Nomination.cs in the models folder to build a table for the users based on the variabels found in the file
 
         }
     }

@@ -1,8 +1,5 @@
-﻿/* References: Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification for details on configuring
-    this project to bundle and minify static web assets. w3school.com/css was also used as a resource to help with the styling of the project.
-*/
-
-/* This the the style sheet for the entire project.*/
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
     white-space: normal;
@@ -10,27 +7,26 @@ a.navbar-brand {
     word-break: break-all;
 }
 
-/* Style for clickable links */
+/* Provide sufficient contrast against white background */
 a {
-    color: #0c6b40;
+    color: #0c6b40 /*#0366d6*/;
 }
 
-a:hover {
-    color: #ffda06
-}
+    a:hover {
+        color: #ffda06
+    }
 
-/* Style for buttons */
 .btn-primary {
     color: #ffda06;
     background-color: #0c6b40;
     border-color: #0c6b40;
 }
 
-.btn-primary:hover {
-    color: #ffda06;
-    background-color: #0e8f55;
-    border-color: #0e8f55;
-}
+    .btn-primary:hover {
+        color: #ffda06;
+        background-color: #0e8f55;
+        border-color: #0e8f55;
+    }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
@@ -100,30 +96,30 @@ table {
     width: 100%
 }
 
-table td, table th {
-    border: 1px solid #e5e5e5;
-    padding: 8px;
-}
+    table td, table th {
+        border: 1px solid #e5e5e5;
+        padding: 8px;
+    }
 
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-table tr:hover {
-    background-color: #dddddd;
-}
+    table tr:hover {
+        background-color: #dddddd;
+    }
 
-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #0c6b40;
-    color: white;
-}
+    table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #0c6b40;
+        color: white;
+    }
 
-table th a {
-    color: #ffda06
-}
+        table th a {
+            color: #ffda06
+        }
 
 /* Style for tabs*/
 .tab {
@@ -132,24 +128,24 @@ table th a {
     background-color: #0c6b40;
 }
 
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    color: #ffda06
-}
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        color: #ffda06
+    }
 
-.tab button:hover {
-    background-color: #0e8f55;
-}
+        .tab button:hover {
+            background-color: #0e8f55;
+        }
 
-.tab button.active {
-    background-color: #0e8f55;
-}
+        .tab button.active {
+            background-color: #0e8f55;
+        }
 
 
 .tabcontent {
@@ -159,8 +155,6 @@ table th a {
     border-top: none;
 }
 
-
-/* log in style */
 #login-header {
     margin-top: 20px;
 }
